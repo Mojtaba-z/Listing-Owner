@@ -17,3 +17,5 @@
 [03/Mar/2023 13:21:54] DEBUG [asyncio:623] Using proactor: IocpProactor
 [03/Mar/2023 13:21:59] DEBUG [asyncio:623] Using proactor: IocpProactor
 [03/Mar/2023 13:22:04] DEBUG [asyncio:623] Using proactor: IocpProactor
+[03/Mar/2023 13:22:48] DEBUG [asyncio:623] Using proactor: IocpProactor
+[03/Mar/2023 13:22:58] DEBUG [asyncio:623] Using proactor: IocpProactor
