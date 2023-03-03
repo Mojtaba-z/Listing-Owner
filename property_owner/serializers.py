@@ -59,11 +59,11 @@ class AmenitiesSerializer(serializers.ModelSerializer):
 
 
 class PropertySerializer(serializers.ModelSerializer):
-    userprofile_id = serializers.PrimaryKeyRelatedField(
-        source='userprofile',
+    owner_id = serializers.PrimaryKeyRelatedField(
+        source='owner',
         queryset=UserProfile.objects.all()
     )
-    userprofile = UserProfileSerializer(required=False)
+    owner = UserProfileSerializer(required=False)
     property_type_id = serializers.PrimaryKeyRelatedField(
         source='property_type',
         queryset=PropertyType.objects.all()
