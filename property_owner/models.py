@@ -44,7 +44,7 @@ class Property(BaseModel):
         related_name='property_city',
         null=True
     )
-    property_photos = models.JSONField(default={})
+    property_photos = models.JSONField(default=dict)
     zip_code = models.CharField(max_length=50, null=True)
     price_per_night = models.BigIntegerField(default=0)
     property_status = models.CharField(max_length=50, default='unreserved')

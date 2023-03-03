@@ -48,7 +48,7 @@ class UserProfile(BaseModel):
     birth_date = models.DateTimeField(default=datetime.now())
     mobile = models.CharField(max_length=20, null=True)
     gender = models.CharField(max_length=10, null=True)
-    profile_pic = models.JSONField(default={})
+    profile_pic = models.JSONField(default=dict)
     role = models.ForeignKey(
         Group,
         on_delete=models.CASCADE,
