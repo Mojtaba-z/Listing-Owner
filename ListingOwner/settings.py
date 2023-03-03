@@ -104,7 +104,7 @@ REST_FRAMEWORK = {
     ),
     # 'DEFAULT_FILTER_BACKENDS': ['djanfergo_filters.rest_framework.DjangoFilterBackend'],
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
-    'DEFAULT_PAGINATION_CLASS': 'Core.middlewares.rest_api_middleware_v2.RestPagination'
+    'DEFAULT_PAGINATION_CLASS': 'core.middlewares.rest_api_middleware_v2.RestPagination'
 }
 
 OAUTH2_PROVIDER = {
