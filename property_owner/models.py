@@ -77,7 +77,7 @@ class Room(BaseModel):
 
 class RoomOptions(BaseModel):
     kind_of_beds = models.CharField(max_length=500, null=True)
-    number_of_beds = models.IntegerField(default=0),
+    number_of_beds = models.IntegerField(default=0)
     capacity_of_guests = models.IntegerField(default=0)
 
     def save(self, *args, **kwargs):
