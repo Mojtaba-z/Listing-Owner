@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django_filters',
     'core',
     'property_owner',
-    'agent'
+    'agent',
+    'client'
 ]
 
 MIDDLEWARE = [

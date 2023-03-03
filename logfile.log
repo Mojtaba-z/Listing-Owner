@@ -1,0 +1,9 @@
+[03/Mar/2023 11:19:20] DEBUG [asyncio:623] Using proactor: IocpProactor
+[03/Mar/2023 11:19:34] DEBUG [asyncio:623] Using proactor: IocpProactor
+[03/Mar/2023 11:19:42] DEBUG [asyncio:623] Using proactor: IocpProactor
+[03/Mar/2023 11:19:56] WARNING [django.request:224] Not Found: /favicon.ico
+[03/Mar/2023 11:19:56] WARNING [django.server:161] "GET /favicon.ico HTTP/1.1" 404 2116
+[03/Mar/2023 11:19:58] DEBUG [asyncio:623] Using proactor: IocpProactor
+[03/Mar/2023 11:19:59] DEBUG [asyncio:623] Using proactor: IocpProactor
+[03/Mar/2023 11:20:12] DEBUG [asyncio:623] Using proactor: IocpProactor
+[03/Mar/2023 11:21:35] DEBUG [asyncio:623] Using proactor: IocpProactor

@@ -44,12 +44,11 @@ class UserProfile(BaseModel):
     first_name = models.CharField(max_length=150, null=True)
     last_name = models.CharField(max_length=150, null=True)
     email = models.EmailField(null=True)
-    fathers_name = models.CharField(max_length=150, null=True)
     national_id = models.CharField(max_length=20, null=True)
     birth_date = models.DateTimeField(default=datetime.now())
     mobile = models.CharField(max_length=20, null=True)
     gender = models.CharField(max_length=10, null=True)
-    profile_pic = models.CharField(max_length=300, null=True)
+    profile_pic = models.JSONField(default=[])
     role = models.ForeignKey(
         Group,
         on_delete=models.CASCADE,
@@ -59,3 +58,17 @@ class UserProfile(BaseModel):
 
     def save(self, *args, **kwargs):
         super(UserProfile, self).save(*args, **kwargs)
+
+
+class Country(BaseModel):
+    name = models.CharField(max_length=150, null=True)
+
+    def save(self, *args, **kwargs):
+        super(Country, self).save(*args, **kwargs)
+
+
+class City(BaseModel):
+    name = models.CharField(max_length=150, null=True)
+
+    def save(self, *args, **kwargs):
+        super(City, self).save(*args, **kwargs)
