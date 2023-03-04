@@ -20,5 +20,7 @@ class AgentListingsSerializer(serializers.ModelSerializer):
         fields = (
             'id',
             'agent',
-            'property'
+            'agent_id',
+            'property',
+            'title'
         )

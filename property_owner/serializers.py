@@ -47,6 +47,7 @@ class RoomSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Room
+        fields = '__all__'
 
 
 class AmenitiesSerializer(serializers.ModelSerializer):
@@ -68,20 +69,38 @@ class PropertySerializer(serializers.ModelSerializer):
         source='property_type',
         queryset=PropertyType.objects.all()
     )
-    property_type = PropertyTypeSerializer(required=False)
+    property_type = serializers.SerializerMethodField('get_property_type')
     property_amenities = AmenitiesSerializer(required=False, many=True)
     room = RoomSerializer(required=False, many=True)
     country_id = serializers.PrimaryKeyRelatedField(
         source='country',
         queryset=Country.objects.all()
     )
-    country = CountrySerializer(required=False)
+    country = serializers.SerializerMethodField('get_country')
     city_id = serializers.PrimaryKeyRelatedField(
         source='city',
         queryset=City.objects.all()
     )
-    city = CitySerializer(required=False)
+    city = serializers.SerializerMethodField('get_city')
 
     class Meta:
         model = Property
         fields = '__all__'
+
+    def get_city(self, instance):
+        if instance.city:
+            return instance.city.name
+        else:
+            return ""
+
+    def get_country(self, instance):
+        if instance.country:
+            return instance.country.name
+        else:
+            return ""
+
+    def get_property_type(self, instance):
+        if instance.property_type:
+            return instance.property_type.title
+        else:
+            return ""

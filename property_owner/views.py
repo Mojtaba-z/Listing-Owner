@@ -6,7 +6,7 @@ from oauth2_provider.contrib.rest_framework import (
 )
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
-
+from core.models import UserProfile
 from .models import (
     Property,
     PropertyType,
@@ -27,30 +27,58 @@ from .serializers import (
 
 
 class PropertyViewSet(viewsets.ModelViewSet):
+    """
+        view set for manage properties create, update, remove, list, retrieve
+    """
     queryset = Property.objects.all()
     serializer_class = PropertySerializer
     permission_classes = [AllowAny]
 
+    def create(self, request, *args, **kwargs):
+        # contains userprofile object
+        userprofile = UserProfile.objects.get(user__id=1)  # we should use request.user to identify user
+        request.data['owner_id'] = userprofile.id
+
+        # send data to serializer
+        serializer = self.serializer_class(data=request.data)
+        if serializer.is_valid():
+            property_obj = serializer.create(validated_data=request.data)  # contains property object
+            serializer = self.serializer_class(property_obj)
+            return Response({'result': serializer.data}, status=status.HTTP_201_CREATED)
+        return Response({'result': serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
+
 
 class PropertyTypeViewSet(viewsets.ModelViewSet):
+    """
+        view set for manage property types create, update, remove, list, retrieve
+    """
     queryset = PropertyType.objects.all()
     serializer_class = PropertyTypeSerializer
     permission_classes = [AllowAny]
 
 
 class RoomViewSet(viewsets.ModelViewSet):
+    """
+        view set for manage rooms create, update, remove, list, retrieve
+    """
     queryset = Room.objects.all()
     serializer_class = RoomSerializer
     permission_classes = [AllowAny]
 
 
 class RoomOptionsViewSet(viewsets.ModelViewSet):
+    """
+        view set for manage room options create, update, remove, list, retrieve
+    """
     queryset = RoomOptions.objects.all()
     serializer_class = RoomOptionsSerializer
     permission_classes = [AllowAny]
 
 
 class AmenitiesViewSet(viewsets.ModelViewSet):
+    """
+        view set for manage amenities create, update, remove, list, retrieve
+    """
     queryset = Amenities.objects.all()
     serializer_class = AmenitiesSerializer
     permission_classes = [AllowAny]
