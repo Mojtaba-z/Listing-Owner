@@ -104,7 +104,8 @@ REST_FRAMEWORK = {
     ),
     # 'DEFAULT_FILTER_BACKENDS': ['djanfergo_filters.rest_framework.DjangoFilterBackend'],
     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
-    'DEFAULT_PAGINATION_CLASS': 'core.middlewares.rest_api_middleware_v2.RestPagination'
+    'DEFAULT_PAGINATION_CLASS': 'core.middlewares.rest_api_middleware_v2.RestPagination',
+    'DATETIME_FORMAT': "%Y-%m-%d %H:%M:%S",
 }
 
 OAUTH2_PROVIDER = {

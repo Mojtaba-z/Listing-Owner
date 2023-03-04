@@ -31,8 +31,8 @@ class AgentListingsViewSet(viewsets.ModelViewSet):
         # send data to serializer
         serializer = self.serializer_class(data=request.data)
         if serializer.is_valid():
-            property_obj = serializer.create(validated_data=request.data)  # contains agent listing object
-            property_obj.property.add(*properties)
-            serializer = self.serializer_class(property_obj)
+            agent_listing_obj = serializer.create(validated_data=request.data)  # contains agent listing object
+            agent_listing_obj.property.add(*properties)
+            serializer = self.serializer_class(agent_listing_obj)
             return Response({'result': serializer.data}, status=status.HTTP_201_CREATED)
         return Response({'result': serializer.errors}, status=status.HTTP_400_BAD_REQUEST)

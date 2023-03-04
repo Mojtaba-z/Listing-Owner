@@ -38,11 +38,15 @@ class PropertyViewSet(viewsets.ModelViewSet):
         # contains userprofile object
         userprofile = UserProfile.objects.get(user__id=1)  # we should use request.user to identify user
         request.data['owner_id'] = userprofile.id
+        amenities = request.data.pop('property_amenities')  # remove amenities ids list from request data
+        rooms = request.data.pop('room')  # remove rooms ids list from request data
 
         # send data to serializer
         serializer = self.serializer_class(data=request.data)
         if serializer.is_valid():
             property_obj = serializer.create(validated_data=request.data)  # contains property object
+            property_obj.property_amenities.add(*amenities)
+            property_obj.room.add(*rooms)
             serializer = self.serializer_class(property_obj)
             return Response({'result': serializer.data}, status=status.HTTP_201_CREATED)
         return Response({'result': serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
