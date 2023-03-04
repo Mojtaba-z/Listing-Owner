@@ -511,3 +511,22 @@ KeyError: 'rooms_id'
 [04/Mar/2023 20:07:34] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000282FA4F73B0>.
 [04/Mar/2023 20:07:39] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000282FA1D01D0>.
 [04/Mar/2023 20:08:05] DEBUG [asyncio:623] Using proactor: IocpProactor
+[04/Mar/2023 20:16:23] DEBUG [asyncio:623] Using proactor: IocpProactor
+[04/Mar/2023 20:32:23] DEBUG [asyncio:623] Using proactor: IocpProactor
+[04/Mar/2023 23:07:37] DEBUG [asyncio:623] Using proactor: IocpProactor
+[04/Mar/2023 23:18:19] DEBUG [asyncio:623] Using proactor: IocpProactor
+[04/Mar/2023 23:20:29] DEBUG [asyncio:623] Using proactor: IocpProactor
+[04/Mar/2023 23:23:02] DEBUG [asyncio:623] Using proactor: IocpProactor
+[04/Mar/2023 23:32:27] DEBUG [asyncio:623] Using proactor: IocpProactor
+[04/Mar/2023 23:35:29] DEBUG [asyncio:623] Using proactor: IocpProactor
+[04/Mar/2023 23:37:02] DEBUG [asyncio:623] Using proactor: IocpProactor
+[04/Mar/2023 23:38:30] DEBUG [asyncio:623] Using proactor: IocpProactor
+[04/Mar/2023 23:39:14] DEBUG [asyncio:623] Using proactor: IocpProactor
+[04/Mar/2023 23:39:22] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002532D3D9590>.
+[04/Mar/2023 23:39:33] DEBUG [asyncio:623] Using proactor: IocpProactor
+[04/Mar/2023 23:39:37] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001A6B2CDAC20>.
+[04/Mar/2023 23:39:37] ERROR [django.server:161] "POST /agent/manage_properties/available_properties/ HTTP/1.1" 500 108812
+[04/Mar/2023 23:39:50] DEBUG [asyncio:623] Using proactor: IocpProactor
+[04/Mar/2023 23:39:55] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x0000025A86EA4A40>.
+[04/Mar/2023 23:40:11] DEBUG [asyncio:623] Using proactor: IocpProactor
+[04/Mar/2023 23:49:14] DEBUG [asyncio:623] Using proactor: IocpProactor

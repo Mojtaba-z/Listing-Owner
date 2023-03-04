@@ -4,7 +4,7 @@ from core.models import (
     BaseModel,
     UserProfile
 )
-from property_owner.models import Property
+from property_owner.models import Property, Room
 # Create your models here.
 
 
@@ -23,6 +23,12 @@ class Reservation(BaseModel):
         Property,
         on_delete=models.CASCADE,
         related_name='property_reservation',
+        null=True
+    )
+    room = models.ForeignKey(
+        Room,
+        on_delete=models.CASCADE,
+        related_name="room_reservation",
         null=True
     )
     reservation_status = models.BooleanField(default=False)
