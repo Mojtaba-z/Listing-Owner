@@ -425,3 +425,89 @@ TypeError: Object of type Room is not JSON serializable
 [04/Mar/2023 19:51:19] DEBUG [asyncio:623] Using proactor: IocpProactor
 [04/Mar/2023 19:51:47] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000164C3254540>.
 [04/Mar/2023 19:55:26] DEBUG [asyncio:623] Using proactor: IocpProactor
+[04/Mar/2023 20:01:42] DEBUG [asyncio:623] Using proactor: IocpProactor
+[04/Mar/2023 20:02:33] DEBUG [asyncio:623] Using proactor: IocpProactor
+[04/Mar/2023 20:02:50] DEBUG [asyncio:623] Using proactor: IocpProactor
+[04/Mar/2023 20:03:01] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000263AE1633B0>.
+[04/Mar/2023 20:03:01] ERROR [django.request:224] Internal Server Error: /client/reservation/
+Traceback (most recent call last):
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 451, in create
+    obj = self.model(**kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\base.py", line 503, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: Reservation() got an unexpected keyword argument 'rooms_id'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\Listing-Owner\client\views.py", line 35, in create
+    reservation_obj = serializer.create(validated_data=request.data)  # contains agent listing object
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\serializers.py", line 981, in create
+    raise TypeError(msg)
+TypeError: Got a `TypeError` when calling `Reservation.objects.create()`. This may be because you have a writable field on the serializer class that is not a valid argument to `Reservation.objects.create()`. You may need to make the field read-only, or override the ReservationSerializer.create() method to handle this correctly.
+Original exception was:
+ Traceback (most recent call last):
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\serializers.py", line 962, in create
+    instance = ModelClass._default_manager.create(**validated_data)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 451, in create
+    obj = self.model(**kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\base.py", line 503, in __init__
+    raise TypeError("%s() got an unexpected keyword argument '%s'" % (cls.__name__, kwarg))
+TypeError: Reservation() got an unexpected keyword argument 'rooms_id'
+
+[04/Mar/2023 20:03:01] ERROR [django.server:161] "POST /client/reservation/ HTTP/1.1" 500 164181
+[04/Mar/2023 20:03:58] DEBUG [asyncio:623] Using proactor: IocpProactor
+[04/Mar/2023 20:04:04] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001B31C872590>.
+[04/Mar/2023 20:04:11] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001B31C645770>.
+[04/Mar/2023 20:04:11] ERROR [django.request:224] Internal Server Error: /client/reservation/
+Traceback (most recent call last):
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\Listing-Owner\client\views.py", line 31, in create
+    room_ids = request.data.pop('rooms_id')
+KeyError: 'rooms_id'
+[04/Mar/2023 20:04:11] ERROR [django.server:161] "POST /client/reservation/ HTTP/1.1" 500 100829
+[04/Mar/2023 20:04:37] DEBUG [asyncio:623] Using proactor: IocpProactor
+[04/Mar/2023 20:05:17] DEBUG [asyncio:623] Using proactor: IocpProactor
+[04/Mar/2023 20:05:23] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x0000017C365874A0>.
+[04/Mar/2023 20:05:29] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x0000017C3634E4F0>.
+[04/Mar/2023 20:07:29] DEBUG [asyncio:623] Using proactor: IocpProactor
+[04/Mar/2023 20:07:34] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000282FA4F73B0>.
+[04/Mar/2023 20:07:39] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000282FA1D01D0>.
+[04/Mar/2023 20:08:05] DEBUG [asyncio:623] Using proactor: IocpProactor
