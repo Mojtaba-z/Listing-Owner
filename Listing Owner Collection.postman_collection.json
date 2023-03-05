@@ -1,0 +1,332 @@
+{
+	"info": {
+		"_postman_id": "669d95c7-c449-41d7-875b-4cd1a9d2a6b1",
+		"name": "Listing Owner Collection",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "13044047"
+	},
+	"item": [
+		{
+			"name": "Property Owner",
+			"item": [
+				{
+					"name": "Property",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"property_name\": \"property number 1\",\r\n    \"property_type_id\": 1,\r\n    \"property_amenities\": [1],\r\n    \"room\": [1],\r\n    \"street_address\": \"cansas street 2\",\r\n    \"address_line\": \"street line 2\",\r\n    \"country_id\": 1,\r\n    \"city_id\": 1,\r\n    \"zip_code\": \"656689\",\r\n    \"price_per_night\": 3000,\r\n    \"property_status\": \"unreserved\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/property_owner/property/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"property_owner",
+								"property",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Property Type",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"camp\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/property_owner/property_type/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"property_owner",
+								"property_type",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Room",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"room_name\": \"room number 2\",\r\n    \"room_size\": \"6*6\",\r\n    \"room_options_id\": 4,\r\n    \"room_status\": \"unreserved\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/property_owner/room/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"property_owner",
+								"room",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Room Options",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"kind_of_beds\": \"kind 2\",\r\n    \"number_of_beds\": 2,\r\n    \"capacity_of_guests\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/property_owner/room_options/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"property_owner",
+								"room_options",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Amenities",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"balcony\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/property_owner/amenities/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"property_owner",
+								"amenities",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Agent",
+			"item": [
+				{
+					"name": "Agent Listings",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"list 1\",\r\n    \"property\": [1, 2]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/agent/agent_listings/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"agent",
+								"agent_listings",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Available Properties in Certain Time",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2022-06-10\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/agent/manage_properties/available_properties/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"agent",
+								"manage_properties",
+								"available_properties",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Available Rooms in Certain Time",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"date\": \"2022-06-22\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/agent/manage_properties/available_rooms/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"agent",
+								"manage_properties",
+								"available_rooms",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "New Request",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Client",
+			"item": [
+				{
+					"name": "Reservation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"special_request\": \"i want two beds\",\r\n    \"start_date\": \"2022-05-21 02:20:15\",\r\n    \"end_date\": \"2022-06-21 02:20:15\",\r\n    \"guest_arrival_time\": \"2022-05-25 02:20:15\",\r\n    \"property_id\": 1,\r\n    \"rooms_id\": [1, 2]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/client/reservation/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"client",
+								"reservation",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
