@@ -9,15 +9,17 @@ from oauth2_provider.contrib.rest_framework import (
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
+
+from client.models import Reservation
 from core.models import UserProfile
 from .models import AgentListings
 from .serializers import AgentListingsSerializer
-from property_owner.models import Property
-from property_owner.serializers import PropertySerializer
+from property_owner.models import Property, Room
+from property_owner.serializers import PropertySerializer, RoomSerializer
 import pytz
 
-
 utc = pytz.UTC
+
 
 # Create your views here.
 
@@ -58,9 +60,10 @@ class ManageProperties(viewsets.ModelViewSet):
         for property_item in self.queryset:
             if property_item.property_reservation.all():  # check if a property has reservation
                 for item in property_item.property_reservation.all():
-                    if not item.start_date <= utc.localize(certain_date) <= item.end_date:
-                        if property_item not in available_property_list:  # prevent from repeat adding same objects
-                            available_property_list.append(property_item)
+                    if item.reservation_type == "property":
+                        if not item.start_date <= utc.localize(certain_date) <= item.end_date:
+                            if property_item not in available_property_list:  # prevent from repeat adding same objects
+                                available_property_list.append(property_item)
                     else:
                         pass
             else:
@@ -70,3 +73,24 @@ class ManageProperties(viewsets.ModelViewSet):
         serializer = self.serializer_class(available_property_list, many=True)
         return Response({'result': serializer.data}, status=status.HTTP_200_OK)
 
+    @action(detail=False, methods=['post'], name="Get detail of rooms that are available at a certain time")
+    def available_rooms(self, request):
+        certain_date = datetime.strptime(request.data['date'], "%Y-%m-%d")  # convert string to date
+        available_rooms_list = []
+        for room_item in Room.objects.all():
+            if Reservation.objects.filter(room=room_item).exists():  # check if room has reservation
+                for item in Reservation.objects.filter(room=room_item):
+                    if item.reservation_type == "room_reserve":
+                        if not item.start_date <= utc.localize(certain_date) <= item.end_date:
+                            property = self.queryset.get(room=room_item)  # contains property of certain room
+                            if property not in available_rooms_list:  # prevent from repeat adding same room objects
+                                available_rooms_list.append(property)
+                            else:
+                                pass
+            else:
+                property = self.queryset.get(room=room_item)  # contains property of certain room
+                available_rooms_list.append(property)
+
+        # serialize property objects
+        serializer = self.serializer_class(available_rooms_list, many=True)
+        return Response({'result': serializer.data}, status=status.HTTP_200_OK)

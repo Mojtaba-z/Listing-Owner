@@ -25,13 +25,12 @@ class Reservation(BaseModel):
         related_name='property_reservation',
         null=True
     )
-    room = models.ForeignKey(
+    room = models.ManyToManyField(
         Room,
-        on_delete=models.CASCADE,
         related_name="room_reservation",
-        null=True
     )
     reservation_status = models.BooleanField(default=False)
+    reservation_type = models.CharField(max_length=100, default="property")
 
     def save(self, *args, **kwargs):
         super(Reservation, self).save(*args, **kwargs)

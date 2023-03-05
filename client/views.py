@@ -40,6 +40,7 @@ class ReservationViewSet(viewsets.ModelViewSet):
                     item for item in Room.objects.filter(id__in=room_ids) if item in reservation_obj.property.room.all()
                 ]
                 if rooms_list:
+                    reservation_obj.room.add(*room_ids)
                     Room.objects.filter(id__in=room_ids).update(room_status="reserved")
                 else:
                     return Response({'message': "room is not for this property"}, status=status.HTTP_404_NOT_FOUND)
