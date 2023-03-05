@@ -46,6 +46,11 @@ class ReservationViewSet(viewsets.ModelViewSet):
                     return Response({'message': "room is not for this property"}, status=status.HTTP_404_NOT_FOUND)
                 reservation_obj.property.property_status = "room_reserve"  # change property status
                 reservation_obj.property.save()
+                reservation_obj.reservation_type = "room_reserve"  # change reservation type
+                reservation_obj.save()
+            else:
+                reservation_obj.property.property_status = "reserved"  # change property status
+                reservation_obj.property.save()
             serializer = self.serializer_class(reservation_obj)
             return Response({'result': serializer.data}, status=status.HTTP_201_CREATED)
         return Response({'result': serializer.errors}, status=status.HTTP_400_BAD_REQUEST)

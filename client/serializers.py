@@ -1,7 +1,7 @@
 from rest_framework import serializers
 from .models import Reservation
 from property_owner.models import Property
-from property_owner.serializers import PropertySerializer
+from property_owner.serializers import PropertySerializer, RoomSerializer
 from core.models import UserProfile
 from core.serializers import UserProfileSerializer
 
@@ -17,6 +17,7 @@ class ReservationSerializer(serializers.ModelSerializer):
         queryset=Property.objects.all()
     )
     property = PropertySerializer(required=False)
+    room = RoomSerializer(required=False, many=True)
 
     class Meta:
         model = Reservation

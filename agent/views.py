@@ -1,5 +1,6 @@
 from datetime import datetime
 
+from django.http import HttpResponse
 from django.shortcuts import render
 from rest_framework import viewsets, status
 from oauth2_provider.contrib.rest_framework import (
@@ -9,7 +10,7 @@ from oauth2_provider.contrib.rest_framework import (
 from rest_framework.decorators import action
 from rest_framework.response import Response
 from rest_framework.permissions import AllowAny
-
+from .helpers.html_report import export_html_reserved
 from client.models import Reservation
 from core.models import UserProfile
 from .models import AgentListings
@@ -49,10 +50,14 @@ class AgentListingsViewSet(viewsets.ModelViewSet):
 
 
 class ManageProperties(viewsets.ModelViewSet):
+    """
+    Manage Properties & Rooms By Listings Agent
+    """
     queryset = Property.objects.all()
     serializer_class = PropertySerializer
     permission_classes = [AllowAny]
 
+    # Show Available Properties To Reserve
     @action(detail=False, methods=['post'], name="Get detail of properties that are available at a certain time")
     def available_properties(self, request):
         certain_date = datetime.strptime(request.data['date'], "%Y-%m-%d")  # convert string to date
@@ -73,6 +78,12 @@ class ManageProperties(viewsets.ModelViewSet):
         serializer = self.serializer_class(available_property_list, many=True)
         return Response({'result': serializer.data}, status=status.HTTP_200_OK)
 
+    # Export Reserved Properties Report In Html
+    @action(detail=False, methods=['get'], name="Get detail of properties that are available at a certain time")
+    def export_reserved_properties(self, request):
+        return export_html_reserved(request, type='property')
+
+    # Show Available Rooms To Reserve
     @action(detail=False, methods=['post'], name="Get detail of rooms that are available at a certain time")
     def available_rooms(self, request):
         certain_date = datetime.strptime(request.data['date'], "%Y-%m-%d")  # convert string to date
@@ -94,3 +105,8 @@ class ManageProperties(viewsets.ModelViewSet):
         # serialize property objects
         serializer = self.serializer_class(available_rooms_list, many=True)
         return Response({'result': serializer.data}, status=status.HTTP_200_OK)
+
+    # Export Reserved Rooms Report In Html
+    @action(detail=False, methods=['get'], name="Get detail of rooms that are available at a certain time")
+    def export_reserved_rooms(self, request):
+        return export_html_reserved(request, type='room')
