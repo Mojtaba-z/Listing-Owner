@@ -89,7 +89,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'listing_owner_db',
         'USER': 'postgres',
-        'pPASSWORD': 'moji1234',
+        'PASSWORD': 'moji1234',
         'PORT': 5432
     }
 }
