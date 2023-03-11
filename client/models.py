@@ -18,7 +18,7 @@ class Reservation(BaseModel):
     special_request = models.TextField(max_length=2000, null=True)
     start_date = models.DateTimeField(default=datetime.now())
     end_date = models.DateTimeField(default=datetime.now())
-    guest_arrival_time = models.DateTimeField(datetime.now())
+    guest_arrival_time = models.DateTimeField(default=datetime.now())
     property = models.ForeignKey(
         Property,
         on_delete=models.CASCADE,

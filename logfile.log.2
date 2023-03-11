@@ -1,0 +1,402 @@
+[11/Mar/2023 00:03:17] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 00:11:49] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 00:12:27] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 00:13:27] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 00:15:21] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 00:15:29] WARNING [django.request:224] Not Found: /agent_listings/
+[11/Mar/2023 00:18:38] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 00:18:46] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001AC23F8A450>.
+[11/Mar/2023 00:23:06] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 00:23:14] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 00:25:12] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 10:25:38] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 10:25:46] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002B1D227D4F0>.
+[11/Mar/2023 10:25:56] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 10:25:56] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 10:26:02] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 10:26:09] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000269D4204130>.
+[11/Mar/2023 10:26:45] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 10:26:53] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001FD69913A40>.
+[11/Mar/2023 10:30:58] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001EC9EE9A630>.
+[11/Mar/2023 10:31:11] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001EC9EB21EF0>.
+[11/Mar/2023 10:36:41] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 10:36:48] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000165BBCB3F90>.
+[11/Mar/2023 10:36:48] ERROR [django.request:224] Internal Server Error: /property_owner/property/
+Traceback (most recent call last):
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\Listing-Owner\property_owner\views.py", line 39, in create
+    userprofile = UserProfile.objects.get(user__id=1)  # we should use request.user to identify user
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 435, in get
+    raise self.model.DoesNotExist(
+core.models.UserProfile.DoesNotExist: UserProfile matching query does not exist.
+[11/Mar/2023 10:39:25] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 10:39:32] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000261897169A0>.
+[11/Mar/2023 10:39:32] ERROR [django.request:224] Internal Server Error: /property_owner/property/
+Traceback (most recent call last):
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\Listing-Owner\property_owner\views.py", line 39, in create
+    userprofile = UserProfile.objects.get(user__id=1)  # we should use request.user to identify user
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 435, in get
+    raise self.model.DoesNotExist(
+core.models.UserProfile.DoesNotExist: UserProfile matching query does not exist.
+[11/Mar/2023 10:40:24] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 10:40:29] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 10:40:36] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001B9048F5770>.
+[11/Mar/2023 10:40:36] ERROR [django.request:224] Internal Server Error: /property_owner/property/
+Traceback (most recent call last):
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\Listing-Owner\property_owner\views.py", line 39, in create
+    userprofile = UserProfile.objects.get(user_id=1)  # we should use request.user to identify user
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 435, in get
+    raise self.model.DoesNotExist(
+core.models.UserProfile.DoesNotExist: UserProfile matching query does not exist.
+[11/Mar/2023 10:40:46] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000248C6AD2720>.
+[11/Mar/2023 10:40:53] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000248C6750DB0>.
+[11/Mar/2023 10:50:10] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 10:50:18] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002501A15FE00>.
+[11/Mar/2023 10:50:18] ERROR [django.request:224] Internal Server Error: /property_owner/property/
+Traceback (most recent call last):
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\Listing-Owner\property_owner\views.py", line 39, in create
+    userprofile = UserProfile.objects.get(user_id=1)  # we should use request.user to identify user
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 435, in get
+    raise self.model.DoesNotExist(
+core.models.UserProfile.DoesNotExist: UserProfile matching query does not exist.
+[11/Mar/2023 10:51:58] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 10:52:30] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 10:53:01] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 11:00:33] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 11:01:39] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 11:02:07] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 11:03:59] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 11:04:06] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000217157B1EF0>.
+[11/Mar/2023 11:08:37] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 11:08:44] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002256C81CB80>.
+[11/Mar/2023 11:20:14] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 11:20:21] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001D0DCEEDEA0>.
+[11/Mar/2023 11:22:04] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 11:22:11] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x0000029262A548B0>.
+[11/Mar/2023 11:22:28] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 11:22:35] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x0000018A08C10220>.
+[11/Mar/2023 11:24:18] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 11:24:28] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001BBA4267900>.
+[11/Mar/2023 11:25:14] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 11:25:22] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002301993EA40>.
+[11/Mar/2023 11:35:28] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 11:35:36] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002BCFD54BB30>.
+[11/Mar/2023 12:07:53] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 12:08:06] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001FAAA168680>.
+[11/Mar/2023 12:22:44] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 12:22:51] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001E181AC5540>.
+[11/Mar/2023 12:24:02] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 12:24:10] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002E35C6B7C20>.
+[11/Mar/2023 12:24:10] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000248C6C96EF0>.
+[11/Mar/2023 12:25:07] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 12:25:15] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x0000027337F05630>.
+[11/Mar/2023 12:26:03] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 12:26:11] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001BBB621C950>.
+[11/Mar/2023 12:26:29] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 12:26:36] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001C8B0243C70>.
+[11/Mar/2023 12:26:36] ERROR [django.request:224] Internal Server Error: /property_owner/property/
+Traceback (most recent call last):
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\Listing-Owner\property_owner\views.py", line 41, in create
+    amenities = request.data.pop('property_amenities')  # remove amenities ids list from request data
+KeyError: 'property_amenities'
+[11/Mar/2023 12:27:55] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 12:28:25] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 12:28:32] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x0000028F539A6EA0>.
+[11/Mar/2023 12:29:15] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x0000020335305770>.
+[11/Mar/2023 12:31:38] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 12:31:40] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 12:31:48] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001DD7C90B1D0>.
+[11/Mar/2023 12:31:48] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001DD7C954770>.
+[11/Mar/2023 12:31:48] ERROR [django.request:224] Internal Server Error: /property_owner/property/
+Traceback (most recent call last):
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\Listing-Owner\property_owner\views.py", line 39, in create
+    userprofile = UserProfile.objects.get(user_id=1)  # we should use request.user to identify user
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 435, in get
+    raise self.model.DoesNotExist(
+core.models.UserProfile.DoesNotExist: UserProfile matching query does not exist.
+[11/Mar/2023 12:34:12] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 12:34:20] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001FA49FF4F40>.
+[11/Mar/2023 12:34:20] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001FA4A0385E0>.
+[11/Mar/2023 12:34:20] ERROR [django.request:224] Internal Server Error: /property_owner/property/
+Traceback (most recent call last):
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\Listing-Owner\property_owner\views.py", line 39, in create
+    userprofile = UserProfile.objects.get(user_id=1)  # we should use request.user to identify user
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 435, in get
+    raise self.model.DoesNotExist(
+core.models.UserProfile.DoesNotExist: UserProfile matching query does not exist.
+[11/Mar/2023 12:35:07] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 12:35:14] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001A78CD18E00>.
+[11/Mar/2023 12:35:14] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001A78CEF5590>.
+[11/Mar/2023 12:35:14] ERROR [django.request:224] Internal Server Error: /property_owner/property/
+Traceback (most recent call last):
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\exception.py", line 47, in inner
+    response = get_response(request)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\core\handlers\base.py", line 181, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\views\decorators\csrf.py", line 54, in wrapped_view
+    return view_func(*args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\viewsets.py", line 125, in view
+    return self.dispatch(request, *args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 509, in dispatch
+    response = self.handle_exception(exc)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 469, in handle_exception
+    self.raise_uncaught_exception(exc)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 480, in raise_uncaught_exception
+    raise exc
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\rest_framework\views.py", line 506, in dispatch
+    response = handler(request, *args, **kwargs)
+  File "D:\Projects\Listing-Owner\property_owner\views.py", line 39, in create
+    userprofile = UserProfile.objects.get(user_id=1)  # we should use request.user to identify user
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\manager.py", line 85, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+  File "C:\Users\DigitalHouse\AppData\Local\Programs\Python\Python39\lib\site-packages\django\db\models\query.py", line 435, in get
+    raise self.model.DoesNotExist(
+core.models.UserProfile.DoesNotExist: UserProfile matching query does not exist.
+[11/Mar/2023 12:35:29] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 12:35:36] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001D255610770>.
+[11/Mar/2023 12:35:36] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001D255646B30>.
+[11/Mar/2023 12:48:58] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 12:49:05] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x0000020D333844A0>.
+[11/Mar/2023 12:49:05] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x0000020D333B3B30>.
+[11/Mar/2023 12:50:58] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 12:51:06] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000201A3E1FDB0>.
+[11/Mar/2023 12:51:06] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000201A3E584F0>.
+[11/Mar/2023 12:55:23] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 12:55:30] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000175DEF0C810>.
+[11/Mar/2023 12:55:30] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000175DEF3AEA0>.
+[11/Mar/2023 12:55:30] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000175DD7CC4A0>.
+[11/Mar/2023 12:55:48] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 12:55:56] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001D6E58AB6D0>.
+[11/Mar/2023 12:55:56] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001D6E58DFBD0>.
+[11/Mar/2023 12:55:56] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001D6E590C900>.
+[11/Mar/2023 12:57:30] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 12:57:37] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001EA597BAD10>.
+[11/Mar/2023 12:57:37] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001EA597F3450>.
+[11/Mar/2023 12:57:37] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001EA597F3770>.
+[11/Mar/2023 12:57:37] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001EA596CF450>.
+[11/Mar/2023 13:51:07] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 13:51:17] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000187495E1590>.
+[11/Mar/2023 13:51:17] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x0000018749610B80>.
+[11/Mar/2023 13:51:17] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x0000018749610F40>.
+[11/Mar/2023 13:51:17] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x0000018749610590>.
+[11/Mar/2023 13:51:17] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001874962E5E0>.
+[11/Mar/2023 13:51:17] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001874962EE50>.
+[11/Mar/2023 13:51:17] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001874962E5E0>.
+[11/Mar/2023 13:51:17] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x0000018749610090>.
+[11/Mar/2023 13:51:50] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 13:52:02] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 13:52:09] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000235319BBD10>.
+[11/Mar/2023 13:52:09] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000235319F9310>.
+[11/Mar/2023 13:52:09] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000235319CB130>.
+[11/Mar/2023 13:52:09] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000235319F0DB0>.
+[11/Mar/2023 13:52:09] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x0000023531A27B30>.
+[11/Mar/2023 13:52:09] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x0000023531A2A400>.
+[11/Mar/2023 13:52:09] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x0000023531A27B30>.
+[11/Mar/2023 13:52:09] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x0000023531A2A2C0>.
+[11/Mar/2023 13:55:16] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 13:55:24] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001C7D470E680>.
+[11/Mar/2023 13:55:24] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001C7D473AC70>.
+[11/Mar/2023 13:55:24] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001C7D478F9A0>.
+[11/Mar/2023 13:55:24] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001C7D479A2C0>.
+[11/Mar/2023 13:55:24] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001C7D479A680>.
+[11/Mar/2023 13:55:24] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001C7D479AF90>.
+[11/Mar/2023 13:55:24] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001C7D47BBEF0>.
+[11/Mar/2023 13:55:24] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001C7D47BF770>.
+[11/Mar/2023 13:55:25] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001C7D47BFEF0>.
+[11/Mar/2023 13:55:25] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001C7D47BFEA0>.
+[11/Mar/2023 14:05:37] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 14:05:44] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001BB95A9B360>.
+[11/Mar/2023 14:05:44] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001BB95ACA9A0>.
+[11/Mar/2023 14:05:44] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001BB95B14F40>.
+[11/Mar/2023 14:05:44] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001BB95B1A860>.
+[11/Mar/2023 14:05:45] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001BB95B1A9F0>.
+[11/Mar/2023 14:05:45] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001BB95B3A5E0>.
+[11/Mar/2023 14:05:45] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001BB95B3A3B0>.
+[11/Mar/2023 14:05:45] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001BB95B41720>.
+[11/Mar/2023 14:05:45] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001BB95B41E50>.
+[11/Mar/2023 14:05:45] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001BB959E1EF0>.
+[11/Mar/2023 14:06:35] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 14:06:42] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000171ACFD8810>.
+[11/Mar/2023 14:06:42] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000171AD005EA0>.
+[11/Mar/2023 14:06:43] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000171AD05BC20>.
+[11/Mar/2023 14:06:43] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000171AD0644F0>.
+[11/Mar/2023 14:06:43] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000171AD064A40>.
+[11/Mar/2023 14:06:43] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000171AD0862C0>.
+[11/Mar/2023 14:06:43] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000171AD064E50>.
+[11/Mar/2023 14:06:43] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000171AD08B360>.
+[11/Mar/2023 14:06:43] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000171AD08B950>.
+[11/Mar/2023 14:06:43] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x00000171AD08B6D0>.
+[11/Mar/2023 14:11:08] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 14:11:16] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002DDA85D9590>.
+[11/Mar/2023 14:11:16] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002DDA8608C70>.
+[11/Mar/2023 14:11:16] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002DDA8658A40>.
+[11/Mar/2023 14:11:16] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002DDA86642C0>.
+[11/Mar/2023 14:11:16] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002DDA86644F0>.
+[11/Mar/2023 14:11:16] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002DDA8664F40>.
+[11/Mar/2023 14:11:16] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002DDA8689E00>.
+[11/Mar/2023 14:11:16] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002DDA868A680>.
+[11/Mar/2023 14:11:16] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002DDA868AEF0>.
+[11/Mar/2023 14:11:16] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002DDA868AEA0>.
+[11/Mar/2023 14:15:50] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 14:15:58] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001434D065D60>.
+[11/Mar/2023 14:15:58] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001434D0974A0>.
+[11/Mar/2023 14:15:58] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001434D0DFB30>.
+[11/Mar/2023 14:15:58] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001434D0E8450>.
+[11/Mar/2023 14:15:58] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001434D0E8630>.
+[11/Mar/2023 14:15:58] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001434D0E8F40>.
+[11/Mar/2023 14:15:58] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001434D0E8B30>.
+[11/Mar/2023 14:15:58] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001434D10E0E0>.
+[11/Mar/2023 14:15:58] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001434D10E810>.
+[11/Mar/2023 14:15:58] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001434D090EA0>.
+[11/Mar/2023 14:18:17] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 14:18:25] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002CECA63C540>.
+[11/Mar/2023 14:18:25] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002CECA66AB80>.
+[11/Mar/2023 14:18:25] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002CECA6BD9A0>.
+[11/Mar/2023 14:18:25] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002CECA6CA270>.
+[11/Mar/2023 14:18:25] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002CECA6CA9A0>.
+[11/Mar/2023 14:18:25] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002CECA6E9220>.
+[11/Mar/2023 14:18:25] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002CECA6ED090>.
+[11/Mar/2023 14:18:25] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002CECA6ED860>.
+[11/Mar/2023 14:18:25] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002CEC865F590>.
+[11/Mar/2023 14:18:25] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002CECA6ED040>.
+[11/Mar/2023 14:19:06] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 14:19:14] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002058D5EBB80>.
+[11/Mar/2023 14:19:14] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002058D629360>.
+[11/Mar/2023 14:19:14] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002058D67B130>.
+[11/Mar/2023 14:19:14] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002058D67B950>.
+[11/Mar/2023 14:19:14] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002058D6F1CC0>.
+[11/Mar/2023 14:19:14] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002058D6FC540>.
+[11/Mar/2023 14:19:14] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002058D702A90>.
+[11/Mar/2023 14:19:14] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002058D6BAF90>.
+[11/Mar/2023 14:19:14] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002058D6F1E50>.
+[11/Mar/2023 14:19:14] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000002058D70B590>.
+[11/Mar/2023 14:20:14] DEBUG [asyncio:623] Using proactor: IocpProactor
+[11/Mar/2023 14:20:22] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001BFDFE2E040>.
+[11/Mar/2023 14:20:22] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001BFDFE5C7C0>.
+[11/Mar/2023 14:20:22] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001BFDFEAF590>.
+[11/Mar/2023 14:20:22] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001BFDFEAFE00>.
+[11/Mar/2023 14:20:22] DEBUG [oauthlib.oauth2.rfc6749.endpoints.resource:70] Dispatching token_type Bearer request to <oauthlib.oauth2.rfc6749.tokens.BearerToken object at 0x000001BFDFF2F220>.
+[11/Mar/2023 14:21:56] DEBUG [asyncio:623] Using proactor: IocpProactor

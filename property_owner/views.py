@@ -36,7 +36,7 @@ class PropertyViewSet(viewsets.ModelViewSet):
 
     def create(self, request, *args, **kwargs):
         # contains userprofile object
-        userprofile = UserProfile.objects.get(user__id=1)  # we should use request.user to identify user
+        userprofile = UserProfile.objects.get(user_id=1)  # we should use request.user to identify user
         request.data['owner_id'] = userprofile.id
         amenities = request.data.pop('property_amenities')  # remove amenities ids list from request data
         rooms = request.data.pop('room')  # remove rooms ids list from request data

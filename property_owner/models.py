@@ -21,7 +21,8 @@ class Property(BaseModel):
     property_type = models.ForeignKey(
         'PropertyType',
         on_delete=models.CASCADE,
-        related_name='property_type'
+        related_name='property_type',
+        null=True
     )
     property_amenities = models.ManyToManyField(
         'Amenities',
