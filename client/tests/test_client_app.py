@@ -3,6 +3,7 @@ from rest_framework import status
 from core.models import UserProfile, User
 from property_owner.models import Property, Room
 from ..models import Reservation
+import pprint
 
 
 class TestReservation(APITestCase):
@@ -28,9 +29,9 @@ class TestReservation(APITestCase):
         response = self.client.post(self.url, data, format='json')
 
         """print response output"""
-        # print("***")
-        # print(response.json())
-        # print("***")
+        print("***")
+        pprint.pprint(response.json())
+        print("***")
         """---------------------"""
 
         # response
@@ -50,9 +51,9 @@ class TestReservation(APITestCase):
         response = self.client.post(self.url, data, format='json')
 
         """print response output"""
-        print("***")
-        print(response.json())
-        print("***")
+        # print("***")
+        # pprint.pprint(response.json())
+        # print("***")
         """---------------------"""
 
         # response
