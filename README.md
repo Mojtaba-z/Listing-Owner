@@ -94,3 +94,9 @@ Body : {
 }
 ```
 ### * You Can Use Listing Owner Postman Collection Export File In Your Postman Account
+### You Can Run Unit Tests By :
+```
+python3 manage.py test agent
+python3 manage.py test client
+python3 manage.py test property_owner
+```
